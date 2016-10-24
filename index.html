@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Грааль и философский камень фронтенда</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,178 +9,637 @@
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Грааль и философский камень фронтенда</h1>
+		<p>Иван Котов / Ivan Kotov / @ivn-cote</p>
 	</header>
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
+
+	<section class="slide" id="floyd">
+		<h2>Грааль и <br/>философский камень<br/> фронтенда</h2>
+		<div class="content-wrapper">
+			<div class="prism-shape">
+				<div class="white-streak"></div>
+				<div class="prism-clip-wrapper">
+					<div class="prism-wrapper">
+						<div class="prism-items">
+							<div class="prism-colors"></div>
+							<div class="prism-colors"></div>
+							<div class="prism-colors"></div>
+							<div class="prism-colors"></div>
+							<div class="prism-colors"></div>
+							<div class="prism-colors"></div>
+							<div class="prism-colors"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='footer'>
+			<h2>Иван Котов</h2>
+			<p>slide animation Abhishek Kumar</p>
+		</div>
+
 		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
+		@import url("https://fonts.googleapis.com/css?family=Lato");
+		#floyd::after {
+			display: none;
+		}
+		#floyd > h2 {
+			position: absolute;
+			top: 110px;
+			left: 90px;
+			width: auto;
+			height: 200px;
+		}
+		#floyd h2 {
+			color: white;
+		}
+		#floyd > .footer {
+			position: absolute;
+			bottom: 90px;
+			left: 90px;
+			width: auto;
+			height: 30px;
+			color: white;
+		}
+		#floyd p {
+			font-size: 12px;
+		}
+		#floyd > * {
+		  box-sizing: border-box;
+		}
+		#floyd {
+		  background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0)), -webkit-linear-gradient(105deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0)), -webkit-radial-gradient(30% 0%, circle, rgba(172, 51, 58, 0.5), rgba(0, 0, 0, 0)), -webkit-linear-gradient(344deg, #000000, rgba(0, 0, 0, 0.97), rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0));
+		  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0)), linear-gradient(-15deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0)), radial-gradient(circle at 30% 0%, rgba(172, 51, 58, 0.5), rgba(0, 0, 0, 0)), linear-gradient(106deg, #000000, rgba(0, 0, 0, 0.97), rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0));
+		  overflow: hidden;
+		  display: -webkit-flex;
+		  display: -webkit-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		}
+
+		.content-wrapper {
+		  margin: auto;
+		}
+
+		.prism-shape {
+		  width: 150px;
+		  height: 150px;
+		  border-bottom: 3px solid #fff;
+		  position: relative;
+		  margin: 2rem auto 5rem;
+		}
+		.prism-shape:before, .prism-shape:after {
+		  content: '';
+		  position: absolute;
+		  width: 150px;
+		  height: 3px;
+		  bottom: 0;
+		  background: #fff;
+		  z-index: 3;
+		}
+		.prism-shape:before {
+		  -webkit-transform: rotate(60deg) translateX(-47%);
+		  transform: rotate(60deg) translateX(-47%);
+		  right: -72px;
+		}
+		.prism-shape:after {
+		  -webkit-transform: rotate(-60deg) translateX(47%);
+		  transform: rotate(-60deg) translateX(47%);
+		  left: -72px;
+		}
+		.prism-shape .white-streak {
+		  height: 3px;
+		  width: 300px;
+		  position: absolute;
+		  left: -278px;
+		  background: #fff;
+		  -webkit-transform: rotate(-13deg) translateY(calc(100% + 110px));
+		  transform: rotate(-13deg) translateY(calc(100% + 110px));
+		  border-radius: 10px 0 0 10px;
+		}
+		.prism-shape .prism-wrapper {
+		  position: relative;
+		  height: 100px;
+		  width: 400px;
+		  -webkit-perspective: 150px;
+		  perspective: 150px;
+		  margin: 80px auto auto -120px;
+		  -webkit-transform: rotate(36deg);
+		  transform: rotate(36deg);
+		}
+		.prism-shape .prism-clip-wrapper {
+		  width: 700px;
+		  height: 520px;
+		  position: absolute;
+		  display: -webkit-flex;
+		  display: -webkit-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		  overflow: hidden;
+		  -webkit-transform: rotate(-31deg);
+		  transform: rotate(-31deg);
+		  left: 153px;
+		  top: -202px;
+		  z-index: 1;
+		}
+
+		@-webkit-keyframes glow {
+		  to {
+		    width: 100%;
+		    -webkit-flex-grow: 1;
+		    -webkit-box-flex: 1;
+		            flex-grow: 1;
+		  }
+		}
+
+		@keyframes glow {
+		  to {
+		    width: 100%;
+		    -webkit-flex-grow: 1;
+		    -webkit-box-flex: 1;
+		        -ms-flex-positive: 1;
+		            flex-grow: 1;
+		  }
+		}
+		.prism-items {
+		  width: 100%;
+		  height: 100%;
+		  position: absolute;
+		  -webkit-transform: rotateY(-20deg);
+		  transform: rotateY(-20deg);
+		  display: -webkit-flex;
+		  display: -webkit-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		  -webkit-flex-direction: column;
+		  -webkit-box-orient: vertical;
+		  -webkit-box-direction: normal;
+		      -ms-flex-direction: column;
+		          flex-direction: column;
+		}
+		.prism-items .prism-colors {
+		  -webkit-flex-grow: 1;
+		  -webkit-box-flex: 1;
+		      -ms-flex-positive: 1;
+		          flex-grow: 1;
+		  -webkit-filter: blur(20px);
+		  filter: blur(20px);
+		  -webkit-animation: glow 1.7s ease-in-out infinite alternate;
+		  animation: glow 1.7s ease-in-out infinite alternate;
+		}
+		.prism-items .prism-colors:nth-child(1) {
+		  width: 99%;
+		}
+		.prism-items .prism-colors:nth-child(2) {
+		  width: 90%;
+		}
+		.prism-items .prism-colors:nth-child(2) {
+		  width: 90%;
+		}
+		.prism-items .prism-colors:nth-child(4) {
+		  width: 93%;
+		}
+		.prism-items .prism-colors:nth-child(5) {
+		  width: 96%;
+		}
+		.prism-items .prism-colors:nth-child(6) {
+		  width: 87%;
+		}
+		.prism-items .prism-colors:nth-child(7) {
+		  width: 100%;
+		}
+		.prism-items .prism-colors:nth-child(1) {
+		  width: 0.9;
+		}
+		.prism-items .prism-colors:nth-child(2) {
+		  width: 0.8;
+		}
+		.prism-items .prism-colors:nth-child(3) {
+		  width: 1;
+		}
+		.prism-items .prism-colors:nth-child(4) {
+		  width: 0.75;
+		}
+		.prism-items .prism-colors:nth-child(5) {
+		  width: 0.94;
+		}
+		.prism-items .prism-colors:nth-child(6) {
+		  width: 0.87;
+		}
+		.prism-items .prism-colors:nth-child(1) {
+		  width: 0.9;
+		}
+		.prism-items .prism-colors:nth-child(1) {
+		  background: violet;
+		}
+		.prism-items .prism-colors:nth-child(2) {
+		  background: indigo;
+		}
+		.prism-items .prism-colors:nth-child(3) {
+		  background: blue;
+		}
+		.prism-items .prism-colors:nth-child(4) {
+		  background: green;
+		}
+		.prism-items .prism-colors:nth-child(5) {
+		  background: yellow;
+		}
+		.prism-items .prism-colors:nth-child(6) {
+		  background: orange;
+		}
+		.prism-items .prism-colors:nth-child(7) {
+		  background: red;
+		}
+		.prism-items .prism-colors:nth-child(1) {
+		  -webkit-animation-delay: 0.25s;
+		          animation-delay: 0.25s;
+		}
+		.prism-items .prism-colors:nth-child(2) {
+		  -webkit-animation-delay: 0.5s;
+		          animation-delay: 0.5s;
+		}
+		.prism-items .prism-colors:nth-child(3) {
+		  -webkit-animation-delay: 0.75s;
+		          animation-delay: 0.75s;
+		}
+		.prism-items .prism-colors:nth-child(4) {
+		  -webkit-animation-delay: 1s;
+		          animation-delay: 1s;
+		}
+		.prism-items .prism-colors:nth-child(5) {
+		  -webkit-animation-delay: 1.25s;
+		          animation-delay: 1.25s;
+		}
+		.prism-items .prism-colors:nth-child(6) {
+		  -webkit-animation-delay: 1.5s;
+		          animation-delay: 1.5s;
+		}
+		.prism-items .prism-colors:nth-child(7) {
+		  -webkit-animation-delay: 1.75s;
+		          animation-delay: 1.75s;
+		}
 		</style>
 	</section>
+
 	<section class="slide">
-		<h2>Shower key features</h2>
+		<h2>Компонентизация Ивана Котова</h2>
+		<img src="pictures/ya.png" width="150" height="150" />
+		<img src="pictures/zvq.jpg" width="150" height="150"/>
+		<img src="pictures/logo__icon_theme_alfa-on-white.svg" width="150" height="150"/>
+		<p class="note">@ivn-cote: medium, github</p>
+	</section>
+
+
+	<section class="slide">
+		<h2>За что мы любим react компоненты</h2>
 		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
+			<li>АПИ для управления состоянием объекта</li>
+			<li>Декларативность</li>
+			<li>JSX (хотя это не бесспорно)</li>
 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
 	</section>
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-	<section class="slide">
-		<h2>All kind of lists</h2>
+		<h2>define Компонент</h2>
 		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
+			<li>Специфичен (часть целого)</li>
+			<li>Принимает данные</li>
+			<li>Декларативен</li>
+			<li>Расширяем</li>
+			<li>Обеспечивает вложенность</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Компонент — философский камень</h2>
+		<img src="pictures/squaredcircle.svg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Причины появления</h2>
+		<ol>
+			<li>Стилизация под гайд</li>
+			<li>Договоренность с дизайнером</li>
+			<li>Использование готовых решений</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Лего</h2>
+		<img src="pictures/lego.jpg" alt="" class="cover">
+		<ol>
+			<li><a href="https://ant.design/docs/react/introduce">ant.design</a></li>
+			<li><a href="https://grommet.github.io">grommet</a></li>
+			<li><a href="http://react-bootstrap.github.io">bootstrap</a></li>
+			<li>et cetera</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>MUI новый bootstrap</h2>
+		<ol>
+			<li>https://react-materialize.github.io/</li>
+			<li>http://berkeleytrue.github.io/react-material</li>
+			<li>http://www.material-ui.com/</li>
+			<li>http://getessence.io/</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Библиотека ARUI</h2>
+		<img src="pictures/logo__icon_theme_alfa-on-white.svg" alt="" class="cover">
+		<ul>
+			<li>Alfa Bank React UI</li>
+			<li>~60 компонентов в приватном репозитории</li>
+			<li>блоки для сетки</li>
+			<li>блоки для лого, кнопок, элементов форм</li>
+			<li>специфические: суммы, формы для кредиток, календари</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Типовой элемент в ARUI</h2>
+		<pre><code>
+	import ...
+	require('./element.css') //на уровне с jsx+test
+	@cn('element') // своя версия bem-cn
+	class Element extends FeatherComponent {
+	    static propTypes = {...}
+	    render() { return <... /> }
+	}
+		</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Причина 2: Сложное поведение</h2>
+		<ol>
+			<li>Сложное в смысле объема
+				<a href="https://github.com/casesandberg/react-color/tree/master/src/components">цветовые пикеры</a>
 			</li>
-			<li>Look, seven rows exactly!</li>
+			<li>Сложное в смысле лени
+				<a href="https://github.com/fisshy/react-scroll">scrollTo</a>
+			</li>
+			<li>Сложное в полном смысле
+				<a href="https://github.com/mzabriskie/react-draggable">DnD</a>
+			</li>
 		</ol>
 	</section>
+
 	<section class="slide">
-		<h2>Serious citations</h2>
+		<h2 class="shout shrink">декларативность упрощает поведение</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Декларативность в простом варианте</h2>
+		<p>https://github.com/istarkov/google-map-react</p>
+		<pre><code>
+&lt;GoogleMap
+    defaultCenter={this.props.center}
+    defaultZoom={this.props.zoom}&gt;
+    &lt;MyGreatPlace lat={59.955413} lng={30.337844}
+    	text={'Aurora Ship'} /&gt;
+&lt;/GoogleMap&gt;
+		</code></pre>
+
+	</section>
+	<section class="slide">
+		<h2>Декларативность для анимация и графики</h2>
+		<ol>
+			<li>https://github.com/FormidableLabs/victory-core/blob/master/src/victory-primitives/bar.js</li>
+			<li>https://github.com/chenglou/react-motion</li>
+		</ol>
+		<pre>
+			<code>
+	&lt;Motion defaultStyle={{x: 0}} style={{x: spring(10)}}&gt;
+	  {value =&gt; &lt;div&gt;{value.x}&gt;/div&gt;}
+	&lt;/Motion&gt;
+			</code>
+		</pre>
+
+	</section>
+	<section class="slide">
+		<h2>Декларативность головного мозга</h2>
+		<p>https://github.com/FormidableLabs/react-music</p>
+		<pre><code>
+	&lt;Song tempo={90}&gt;
+	  &lt;Sequencer resolution={16} bars={1}&gt;
+	    &lt;Sampler
+	      sample=&quot;/samples/kick.wav&quot;
+	      steps={[0, 4, 8, 12]}
+	    /&gt; &lt;/Sequencer&gt; &lt;/Song&gt;
+		</code></pre>
+
+	</section>
+
+	<section class="slide">
+		<h2>Но какой ценой</h2>
+		<pre><code>
+	render() {
+		return &lt;span&gt;{this.props.children}&lt;/span&gt;;
+	}
+		</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Обертка как вариант готового компонента</h2>
+		<img src="pictures/0a796f702c9b7807e9f0d8544a84bb66.png" alt="" class="cover">
+		<p class="note">Router</p>
+	</section>
+
+	<section class="slide">
+		<h2>Еще обертки</h2>
+		<ol>
+			<li>Управление DOM
+				<a href="https://github.com/airbnb/react-dates/blob/bff83efad97bb29cf52a2198dd721c60fdd2fa2b/src/components/DayPicker.jsx">OutsideClickHandler from react-dates by airbnb</a>
+			</li>
+			<li>Управление темами
+				<a href="https://github.com/callemall/material-ui-webpack-example/blob/25938ac6f5db94645e6ea9f24a903792d3133c5d/src/app/Main.js">MuiThemeProvider from material-ui</a>
+			</li>
+			<li>Управление поведением <a href="https://github.com/mzabriskie/react-draggable">draggable</a></li>
+			<li>Безудержное веселье <a href="https://github.com/Wildhoney/ReactShadow">ReactShadow</a></li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Shadow DOM обертка</h2>
+		<pre><code>
+import ShadowDOM from 'react-shadow';
+export default props =&gt; {
+    return (
+        &lt;ShadowDOM include={['file.css', props.theme]}&gt;
+            &lt;h1&gt;Calendar for {props.date}&lt;/h1&gt;
+        &lt;/ShadowDOM&gt;
+    );
+
+}
+		</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Рождение нового элемента</h2>
+		<img src="pictures/000003.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Полезная мутация</h2>
+		<p>from sound-redux <a href="https://github.com/andrewngu/sound-redux/blob/48d85950b0f62329956b014b7a44aabc99db062e/scripts/components/Modal.js">Modal component</a></p>
+		<pre><code>
+render() {
+    return (
+      &lt;div className=&quot;modal&quot; onClick={this.closeModal}&gt;
+        {this.renderContent()}
+      &lt;/div&gt;
+    );}
+		</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>render функция</h2>
+		<ol>
+			<li>Монолит ↙️ </li>
+			<li>Выделение функции ↙️  </li>
+			<li>Выделение метода ↙️  </li>
+			<li>Выделение компонента ⚡️</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Зачаток - render функция</h2>
+		<p>Монолит:
+			<a href="https://github.com/airbnb/rheostat/blob/master/src/Slider.jsx">rheostat by airbnb</a>
+		</p>
+		<p>Обработка частного случая
+			<a href="https://github.com/airbnb/react-dates/blob/master/src/components/SingleDatePicker.jsx"> react-dates by airbnb</a>
+		</p>
+		<p>Вынесение в метод</p>
+		<p><a href="https://github.com/react-toolbox/react-toolbox/blob/dev/components/autocomplete/Autocomplete.js">autocomplete</a></p>
+		<p><a href="https://github.com/FormidableLabs/victory-core/blob/master/src/victory-primitives/point.js">victory by FormidableLabs</a></p>
+	</section>
+	<section class="slide">
+		<h2>render в отдельный компонент</h2>
+		<p><a href="https://github.com/getsentry/sentry/blob/master/src/sentry/static/sentry/app/components/avatar.jsx">getsentry</a></p>
+		<p><a href="https://github.com/recharts/recharts/blob/master/src/polar/PolarGrid.js">recharts</a></p>
+		<p>renderConcentricPolygon</p>
+		<p>renderConcentricPath</p>
+		<p>renderPolarAngles</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Больше компонентов удобно для поддержки кода</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Большие и малые кирпичики</h2>
+		<p>Критическая масса примитивов https://github.com/FormidableLabs/victory-core/tree/master/src/victory-primitives</p>
+		<p>https://github.com/casesandberg/react-color/tree/master/src/components</p>
+
+	</section>
+	<section class="slide">
+		<h2>Можно сразу порезать интерфейс</h2>
+		<img src="pictures/carou.png" alt="" class="cover">
+		<p class="note">БЭМ в помощь</p>
+		<p>структура каталога <br />указывает на решение</p>
+		<p><a href="https://github.com/TeamWertarbyte/material-auto-rotating-carousel/tree/master/src
+		">carousel by TeamWertarbyte</a></p>
+	</section>
+
+	<section class="slide">
+		<h2>Zvooq <br />example</h2>
+		<img src="pictures/foals.png" alt="" class="cover">
+		<p><a href="http://zvooq.com/release/3446285/">Album Page</a></p>
+	</section>
+
+	<section class="slide">
+		<h2>Zvooq <br />example<br /> #2</h2>
+		<img src="pictures/zvooq.png" alt="" class="cover">
+		<p><a href="http://zvooq.com/tm/2015/editors">Zvooq Promo Page</a></p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">компонент: семантика, <br/>не стиль</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Подытог: 3 варианта компонентов</h2>
+		<ul>
+			<li>🎯 Следование дизайнерскому видению</li>
+			<li>🎯 Декларативность и обертки</li>
+			<li>🎯 Деление на мелкие подмодули</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>🔮 Философский камень</h2>
+		<ul>
+			<li>Исцеляет от всех болезней</li>
+			<li>Превращает в металлы в благородное золото</li>
+		</ul>
+		<p class="note">
+			Как алхимики искали способ превращения всего в золото, мы ищем способ превратить разработку в конструирование из кирпичиков
+		</p>
+	</section>
+
+
+	<section class="slide">
+		<h2>А теперь web components</h2>
+		<ul>
+			<li>Custom Elements</li>
+			<li>Shadow DOM</li>
+			<li>HTML Templates</li>
+			<li>HTML Imports</li>
+			<li><a href="http://beta.webcomponents.org">beta.webcomponents.org</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/google.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Web components внутри react</h2>
+		<p>В качестве листьев Virtual DOM Tree</p>
+		<p>https://github.com/jscissr/react-polymer</p>
+		<p>React для склейки DOM с данными!</p>
+	</section>
+
+	<section class="slide">
+		<h2>🏆 Грааль</h2>
+		<ul>
+			<li>Потерянная реликвия</li>
+			<li>Исцеляет от всех болезней</li>
+		</ul>
+		<p class="note">
+			Мы так долго вас ждали, независимые компоненты в стандарте!
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">если порезать слона и скрепить части, <br/>он не пойдет</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Управление</h2>
+		<ul>
+			<li>unidirectional</li>
+			<li>bidirectional</li>
+			<li>observables</li>
+			<li>MV*</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">компоненты <br/>зависимы <br/>🔮 🏆 💔</h2>
+	</section>
+
+	<section class="slide">
 		<figure>
 			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+				<p>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
 			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
+			<figcaption>Martin Fowler</figcaption>
 		</figure>
 	</section>
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
+
 	<div class="progress"></div>
 	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
+	<!-- Copyright © 2016 Ivan Kotov -->
 </body>
 </html>
