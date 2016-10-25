@@ -33,6 +33,7 @@
 				</div>
 			</div>
 		</div>
+		<img class="place left bottom" src="pictures/global_455009408.jpeg" width="120" />
 		<div class='footer'>
 			<h2>Иван Котов</h2>
 			<p>slide animation Abhishek Kumar</p>
@@ -56,7 +57,7 @@
 		#floyd > .footer {
 			position: absolute;
 			bottom: 90px;
-			left: 90px;
+			left: 130px;
 			width: auto;
 			height: 30px;
 			color: white;
@@ -345,7 +346,7 @@
 
 	<section class="slide">
 		<h2>Библиотека ARUI</h2>
-		<img src="pictures/logo__icon_theme_alfa-on-white.svg" alt="" class="cover">
+		<img src="pictures/logo__icon_theme_alfa-on-white.svg" alt="" class="place right" width="300">
 		<ul>
 			<li>Alfa Bank React UI</li>
 			<li>~60 компонентов в приватном репозитории</li>
@@ -360,10 +361,10 @@
 		<pre><code>
 	import ...
 	require('./element.css') //на уровне с jsx+test
-	@cn('element') // своя версия bem-cn
-	class Element extends FeatherComponent {
-	    static propTypes = {...}
-	    render() { return <... /> }
+	<mark class="important">@cn('element')</mark> // своя версия bem-cn
+	<mark>class</mark> Element extends FeatherComponent {
+	  static propTypes = {...}
+	  render() { return <... /> }
 	}
 		</code></pre>
 	</section>
@@ -384,7 +385,7 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">декларативность упрощает поведение</h2>
+		<h2 class="shout grow">декларативность упрощает поведение</h2>
 	</section>
 
 	<section class="slide">
@@ -392,10 +393,10 @@
 		<p>https://github.com/istarkov/google-map-react</p>
 		<pre><code>
 &lt;GoogleMap
-    defaultCenter={this.props.center}
-    defaultZoom={this.props.zoom}&gt;
-    &lt;MyGreatPlace lat={59.955413} lng={30.337844}
-    	text={'Aurora Ship'} /&gt;
+  <mark>defaultCenter</mark>={this.props.center}
+  <mark>defaultZoom</mark>={this.props.zoom}&gt;
+  &lt;MyGreatPlace <mark>lat</mark>={59.955413} <mark>lng</mark>={30.337844}
+    text={'Aurora Ship'} /&gt;
 &lt;/GoogleMap&gt;
 		</code></pre>
 
@@ -408,9 +409,9 @@
 		</ol>
 		<pre>
 			<code>
-	&lt;Motion defaultStyle={{x: 0}} style={{x: spring(10)}}&gt;
-	  {value =&gt; &lt;div&gt;{value.x}&gt;/div&gt;}
-	&lt;/Motion&gt;
+&lt;Motion defaultStyle={{x: 0}} style={{x: <mark class="important">spring(10)</mark>}}&gt;
+  {value =&gt; &lt;div&gt;{value.x}&gt;/div&gt;}
+&lt;/Motion&gt;
 			</code>
 		</pre>
 
@@ -419,12 +420,12 @@
 		<h2>Декларативность головного мозга</h2>
 		<p>https://github.com/FormidableLabs/react-music</p>
 		<pre><code>
-	&lt;Song tempo={90}&gt;
-	  &lt;Sequencer resolution={16} bars={1}&gt;
-	    &lt;Sampler
-	      sample=&quot;/samples/kick.wav&quot;
-	      steps={[0, 4, 8, 12]}
-	    /&gt; &lt;/Sequencer&gt; &lt;/Song&gt;
+&lt;Song tempo={90}&gt;
+  &lt;Sequencer resolution={16} bars={1}&gt;
+    &lt;Sampler
+      <mark>sample=&quot;/samples/kick.wav&quot;</mark>
+      steps={[0, 4, 8, 12]}
+    /&gt; &lt;/Sequencer&gt; &lt;/Song&gt;
 		</code></pre>
 
 	</section>
@@ -433,7 +434,7 @@
 		<h2>Но какой ценой</h2>
 		<pre><code>
 	render() {
-		return &lt;span&gt;{this.props.children}&lt;/span&gt;;
+	  return &lt;span&gt;<mark class="important">{this.props.children}</mark>&lt;/span&gt;;
 	}
 		</code></pre>
 	</section>
@@ -461,15 +462,13 @@
 	<section class="slide">
 		<h2>Shadow DOM обертка</h2>
 		<pre><code>
-import ShadowDOM from 'react-shadow';
+<mark>import ShadowDOM from 'react-shadow';</mark>
 export default props =&gt; {
-    return (
-        &lt;ShadowDOM include={['file.css', props.theme]}&gt;
-            &lt;h1&gt;Calendar for {props.date}&lt;/h1&gt;
-        &lt;/ShadowDOM&gt;
-    );
-
-}
+  return (
+    &lt;ShadowDOM <mark>include</mark>={['file.css', props.theme]}&gt;
+      &lt;h1&gt;Calendar for {props.date}&lt;/h1&gt;
+    &lt;/ShadowDOM&gt;
+  )}
 		</code></pre>
 	</section>
 
@@ -483,11 +482,11 @@ export default props =&gt; {
 		<p>from sound-redux <a href="https://github.com/andrewngu/sound-redux/blob/48d85950b0f62329956b014b7a44aabc99db062e/scripts/components/Modal.js">Modal component</a></p>
 		<pre><code>
 render() {
-    return (
-      &lt;div className=&quot;modal&quot; onClick={this.closeModal}&gt;
-        {this.renderContent()}
-      &lt;/div&gt;
-    );}
+  return (
+    &lt;div className=&quot;modal&quot; onClick={this.closeModal}&gt;
+      <mark class="important">{this.renderContent()}</mark>
+    &lt;/div&gt;
+  )}
 		</code></pre>
 	</section>
 
@@ -523,15 +522,18 @@ render() {
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">Больше компонентов удобно для поддержки кода</h2>
+		<h2 class="shout grow">Больше компонентов удобно для поддержки кода</h2>
 	</section>
 
 	<section class="slide">
 		<h2>Большие и малые кирпичики</h2>
-		<p>Критическая масса примитивов https://github.com/FormidableLabs/victory-core/tree/master/src/victory-primitives</p>
-		<p>https://github.com/casesandberg/react-color/tree/master/src/components</p>
-
+		<p>Достигаем критической массы примитивов</p>
+		<ol>
+			<li><a href="https://github.com/FormidableLabs/victory-core/tree/master/src/victory-primitives">victory by FormidableLabs</a></li>
+			<li><a href="https://github.com/casesandberg/react-color/tree/master/src/components">react-color by casesandberg</a></li>
+		</ol>
 	</section>
+
 	<section class="slide">
 		<h2>Можно сразу порезать интерфейс</h2>
 		<img src="pictures/carou.png" alt="" class="cover">
@@ -554,7 +556,7 @@ render() {
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">компонент: семантика, <br/>не стиль</h2>
+		<h2 class="shout grow">компонент: семантика, <br/>не стиль</h2>
 	</section>
 
 	<section class="slide">
@@ -570,7 +572,7 @@ render() {
 		<h2>🔮 Философский камень</h2>
 		<ul>
 			<li>Исцеляет от всех болезней</li>
-			<li>Превращает в металлы в благородное золото</li>
+			<li>Превращает металлы в благородное золото</li>
 		</ul>
 		<p class="note">
 			Как алхимики искали способ превращения всего в золото, мы ищем способ превратить разработку в конструирование из кирпичиков
@@ -612,7 +614,7 @@ render() {
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">если порезать слона и скрепить части, <br/>он не пойдет</h2>
+		<h2 class="shout grow">если порезать слона и скрепить части, <br/>он не пойдет</h2>
 	</section>
 
 	<section class="slide">
@@ -626,7 +628,8 @@ render() {
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">компоненты <br/>зависимы <br/>🔮 🏆 💔</h2>
+		<h2 class="shout grow">компоненты <br/>зависимы</h2>
+		<h2>🔮 🏆 💔</h2>
 	</section>
 
 	<section class="slide">
@@ -636,6 +639,9 @@ render() {
 			</blockquote>
 			<figcaption>Martin Fowler</figcaption>
 		</figure>
+		<ul>
+			<li class="next">мои контакты: <a mailto="kotovivan@gmail.com">kotovivan@gmail.com</a></li>
+		</ul>
 	</section>
 
 	<div class="progress"></div>
